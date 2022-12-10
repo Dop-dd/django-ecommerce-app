@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <img style="width: 100%" src="{% static 'img/hero.PNG' %}" alt="">
+        <img style="width: 100%" src="{% static 'img/hero.jpg' %}" alt="">
     </div>
 </div>
 
@@ -27,19 +27,22 @@
 <!----- Display products image -->
 <div class="container">
     <div class="row">
-        {% for i in '12345678' %}
+        {% for product in products %}
         <div class="col-9 mx-auto col-md-6 col-lg-3">
             <div class="card mb-5" style="border-color: transparent;">
                 <div class="p-4">
-                    <img src="{% static 'img/product8.jpg' %}" class="card-img-top" alt="">
+                    <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
+                    <!--<img src="{% static 'img/product8.jpg' %}" class="card-img-top" alt=""> -->
                 </div>
 
                 <!----- Display products title -->
                 <div class="card-footer d-flex justify-content-between"
                     style="background: transparent; border-color: transparent">
-                   <p class="font-weight-bold mb-0">TShirt</p>
+                   <p class="font-weight-bold mb-0">
+                    {{product.name}}
+                   </p>
                    <h5 class="text-info font-italic mb-0">
-                    <span class="mr-1">10</span>€</h5>
+                    <span class="mr-1"></span>{{product.price}}</h5>
                 </div>
             </div>
         </div>
