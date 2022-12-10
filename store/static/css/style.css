@@ -2,6 +2,16 @@ body {
     background: #f3f3f3;
 }
 
+.navbar{
+    height: 100px;
+}
+
+.navbar-brand {
+    height: 90px;
+    width: 180px;
+    margin-right: 50px;
+}
+
 /* Product page */
 .product_title {
     font-size: 25px;
