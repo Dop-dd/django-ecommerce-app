@@ -1,0 +1,18 @@
+.cart_table {
+    min-width: 400px;
+    font-size: 14px;
+}
+
+/*  table head */
+.cart_thead {
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .2;
+    background-color: #f8f9fa !important;
+}
+
+/* Cart icons */
+.cart_icon {
+    text-decoration: none;
+    color: #868e96 !important;
+}
